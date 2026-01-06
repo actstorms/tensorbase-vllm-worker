@@ -9,7 +9,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 WORKDIR /app
 
 # Install only the additional dependencies we need
-RUN pip install --no-cache-dir \
+RUN python3 -m pip install --no-cache-dir \
     httpx==0.28.1
 
 # Copy server code
@@ -32,4 +32,4 @@ ENV TENSOR_PARALLEL_SIZE=1
 ENTRYPOINT []
 
 # Run the server
-CMD ["python", "server.py"]
+CMD ["python3", "server.py"]
