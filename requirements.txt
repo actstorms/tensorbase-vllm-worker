@@ -1,0 +1,4 @@
+# Additional dependencies for vLLM worker
+# Note: vLLM, PyTorch, FastAPI, uvicorn are already in the base image
+
+httpx==0.28.1
