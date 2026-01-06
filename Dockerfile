@@ -28,5 +28,8 @@ ENV MAX_MODEL_LEN=4096
 ENV GPU_MEMORY_UTILIZATION=0.90
 ENV TENSOR_PARALLEL_SIZE=1
 
+# Reset entrypoint as the base image has one that tries to parse our CMD as arguments
+ENTRYPOINT []
+
 # Run the server
 CMD ["python", "server.py"]
